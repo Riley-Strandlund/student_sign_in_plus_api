@@ -19,6 +19,7 @@ onMounted( () => {
 
 <template>
 <!--HTML Template-->
+<h1>Student Sign In</h1>
 
 <NewStudentForm></NewStudentForm>
 <StudentTable></StudentTable>
@@ -29,6 +30,9 @@ onMounted( () => {
 
 <style scoped>/*'scoped' in the context of style means to keep the style choices localized in this component */
 
-
+h1 {
+    margin: 10px;
+    color:violet;
+}
 
 </style>

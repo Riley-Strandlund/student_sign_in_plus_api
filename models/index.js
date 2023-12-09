@@ -11,7 +11,10 @@ const createStudentModel = require('./student.js') //So the '.' is to get a file
 // if there is not NODE_ENV set, like locally on your computer, its value will be set to "development"
 const env = process.env.NODE_ENV || 'development' 
 
+const dbPassword = process.env.DB_PASSWORD
+
 const config = configJson[env] // read the configuration object for 'development' or 'production'
+config.password = dbPassword //this is being added to config
 
 const sequelize = new Sequelize(config)
 
